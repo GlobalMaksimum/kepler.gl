@@ -21,6 +21,9 @@
 /* setup.js */
 import {JSDOM, VirtualConsole} from 'jsdom';
 import global from 'global';
+/* eslint-disable no-unused-vars */
+import {gl} from '@deck.gl/test-utils';
+/* eslint-enable no-unused-vars */
 
 const virtualConsole = new VirtualConsole();
 virtualConsole.sendTo(console);
