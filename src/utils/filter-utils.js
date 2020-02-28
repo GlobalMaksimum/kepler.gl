@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Uber Technologies, Inc.
+// Copyright (c) 2020 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -380,6 +380,9 @@ export function filterData(dataset, filters) {
  * @returns {Boolean} - whether value falls in the range of the filter
  */
 export function isDataMatchFilter(data, filter, i, field) {
+  if(!field){
+    field={tableFieldIndex:1}
+  }
   const val = data[field.tableFieldIndex - 1];
   if (!filter.type) {
     return true;
